@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata';
+    color: aliceblue;
+}
+
+body {
+    background-image: url(assets/background-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+    padding-top: 35px;
+}
+
+h1 {
+    font-size: 3rem;
+    width: 70%;
+    padding-top: 20px;
+    color: aliceblue;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.texts p {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 35px;
+    gap: 20px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.avatar-file-container {
+    height: 150px;
+    width: 100%;
+    max-width: 650px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed hsl(245, 15%, 58%);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+}
+
+.avatar-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    border: 1px solid hsl(245, 15%, 58%);
+    background-color: hsl(245, 19%, 35%);
+    content: 100px;
+}
+
+.avatar {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.938rem;
+}
+
+form input[type=text], [type=email] {
+    font-size: 1.25rem;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid hsl(245, 15%, 58%);
+    padding: 15px;
+}
+
+form input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.email-info-icon, .notice-email {
+    display: none;
+}
+
+.validation-button {
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    background-color: hsl(7, 88%, 67%);
+    color: hsl(248, 70%, 10%);
+}
+
+.validation-button:hover {
+    cursor: pointer;
+    background-color: hsl(7, 71%, 60%);
+}
+
+.texts .name {
+    background: linear-gradient(90deg, rgba(243, 115, 98, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-email {
+    color: aliceblue;
+    max-width: 500px;
+}
+
+.email {
+    color: hsl(7, 88%, 67%);
+}
+
+/*---------- TICKET DESIGN ----------*/
+
+.ticket {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ticket-body {
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.ticket-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 220px;
+    width: 450px;
+}
+
+.data-and-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.event-data {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.event-data img {
+    height: 35px;
+}
+
+.date-and-location {
+    display: flex;
+    flex-direction: column;
+    color: #b0a6c2;
+    font-size: 1rem;
+}
+
+.ticket-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar-img {
+    width: 70px;
+    height: 65px;
+    border-radius: 10%;
+}
+
+.ticket-profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ticket-profile-info .name {
+    font-size: 1.2rem;
+    color: aliceblue;
+}
+
+.user-github {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bi.bi-github, .github {
+    font-size: 0.8rem;
+}
+
+.ticket-number {
+    font-size: 1.4rem;
+    color: rgba(200, 200, 200, 0.5);
+    writing-mode: vertical-lr;
+    padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 520px) {
+    
+    .texts p {
+        width: 90%;
+    }
+    
+    form {
+        width: 90%;
+    }
+ 
+    .ticket-data {
+        height: 165px;
+        width: 325px;
+    }
+
+    .data-and-profile {
+        gap: 35px;
+    }
+
+    .event-data img {
+        height: 100%;
+    }
+
+    .date-and-location {
+        font-size: 0.8rem;
+    }
+
+    .avatar-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .ticket-number {
+        font-size: 1rem;
+        padding-right: 5px;
+    }
+}
